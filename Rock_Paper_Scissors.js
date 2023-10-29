@@ -1,10 +1,11 @@
 const prompt = require('prompt-sync')()
 
+
 function getMove(name) {
     const validMoves = ['rock' , 'paper' , 'scissors']
     let move = 'Invalid move'
     while (validMoves.includes(move)=== false) { // while move is not rock, paper, scissors
-        move = prompt(`${name} choose Rock Paper or Scissors: `)
+        move = prompt.hide(`${name} choose Rock Paper or Scissors: `)
         move = move.toLowerCase().trim()
     }
 
